@@ -223,7 +223,7 @@
                         <!-- Vendor thumbnail -->
                         <div class="vendor-img zoomimg">
                             <!-- Vendor img -->
-                            <a href="list-single-2.php"><?php echo '<img src="'.$row[8].'" alt=""  class="img-fluid">'; ?></a>
+                            <a href="list-single-2.php?id=<?php echo $row[0];?>"><?php echo '<img src="'.$row[8].'" alt=""  class="img-fluid">'; ?></a>
                             <div class="wishlist-sign"><a href="#" class="btn-wishlist"><i class="fa fa-heart"></i></a></div>
                         </div>
                         <!-- /.Vendor img -->
