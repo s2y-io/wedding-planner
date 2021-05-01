@@ -98,19 +98,25 @@
             </div>
         </div>
     </div>
+    <?php
+                                        include "../silverstar/connection/DB.php";
+                                        $id = $_GET['id'];
+                                        $resultsetGetlist = mysqli_query($connection, "SELECT * FROM newlisting WHERE idnewlisting='".$id."' AND approveflag='1' AND delflag='0'");
+                                        while ($row = mysqli_fetch_row($resultsetGetlist)) {
+                                    ?>
     <div class="list-single-second">
         <div class="container">
             <div class="list-single-second-pageheader">
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
                         <div class="vendor-headings">
-                            <h2 class="mb10">Studio 3000</h2>
-                            <p class="vendor-address">40 Galle Rd, Colombo 10280, Sri Lanka<a href="#location" class="btn-secondary-link ml-2">View Map</a> </p>
+                            <h2 class="mb10"><?php echo $row[1]; ?></h2>
+                            <p class="vendor-address"><?php echo $row[3]; ?><a href="#location" class="btn-secondary-link ml-2">View Map</a> </p>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                         <div class="vendor-headings">
-                            <a href="contact-us.html" class="btn btn-default">Contact us</a>
+                            <a href="contact-us.php" class="btn btn-default">Contact us</a>
                         </div>
                     </div>
                 </div>
@@ -160,9 +166,9 @@
                         <div class="">
                             <div class="vendor-descriptions">
                                 <h3 class="border-bottom mb20 pdb10">About Us</h3>
-                                <p>We Have Developed A Range Of Services That Meet Our Clients’ Needs.Ranging From: Full Wedding Coordination,  Tailor Made Services, Day Coordination,Pre-Wedding Events, Vendor Sourcing.We Also Organise  Birthdays,  Engagements & Corporate Events </p>
-                                <h4>Services</h4>
-                                <p>PHOTOGRAPHY | CINEMATOGRAPHY | TRANSPORTATION | EVENT PLANNING | LEISURE MANAGEMENT</p>
+                                <p><?php echo $row[5]; ?></p>
+                                <h4>Web Link</h4>
+                                <p><a href="<?php echo $row[4];?>" class="title" target=_blank><?php echo $row[4];?></a></p>
                                 <!-- <div class="mb40">
                                     <h3 class="border-bottom mb20 pdb10">Venue Highlights</h3>
                                     <p class="text-dark">
@@ -270,7 +276,7 @@
                             </div>
                         </div>
                         <!-- venue-admin -->
-                        <div class="vendor-owner-profile mb30">
+                        <!-- <div class="vendor-owner-profile mb30">
                             <div class="vendor-owner-profile-head">
                                 <div class="vendor-owner-profile-img"><img src="./images/admin-pic.jpg" class="rounded-circle" alt=""></div>
                                 <small>Venue Owner</small>
@@ -283,7 +289,7 @@
                                 <p class="text-default mb10">info@3000.lk</p>
                                 <a href="#" class="btn btn-primary">contact vendor</a>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- /.venue-admin -->
                         <!-- social-media -->
                         <!-- <div class="mb30">
@@ -301,7 +307,7 @@
             </div>
         </div>
     </div>
-
+    <?php } ?>
     </div>
     <div class="social-media-block">
         <div class="container">
@@ -326,9 +332,9 @@
             <div class="row">
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                     <div class="footer-widget">
-                        <a href="#"><img src="images/footer-logo.png" alt="" class="mb20"></a>
-                        <p class="mb10">Vestibulum ante elit, convallis quis nibh in, vulputate rhoncus massa. In hac habitasse platea dictumst.</p>
-                        <p>In hac habitasse platea dictumst simple dummy content here.</p>
+                        <a href="#"><img src="images/logo1.png" alt="" class="mb20"></a>
+                        <p class="mb10">Bring the vision of brides and grooms to life by planning, organizing and overseeing all aspects of the wedding ceremony, reception and, often, the honeymoon.</p>
+                        <!-- <p>In hac habitasse platea dictumst simple dummy content here.</p> -->
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
@@ -336,10 +342,10 @@
                         <h3 class="widget-title">
                             Contact Address
                         </h3>
-                        <p>4998 Elk Creek Road Canton,
-                            <br> GA 30114</p>
-                        <p class="mb0 text-default">+0-800-1234-123</p>
-                        <p class="mb0 text-default">info@weddings.com</p>
+                        <p>Kottwa, Pannipitiya,
+                            <br> Sri Lanka</p>
+                        <p class="mb0 text-default">+9471 578 1663</p>
+                        <p class="mb0 text-default">info@yopmail.com</p>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
@@ -372,7 +378,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-right">
-                    <p>© 2018 Weddings. All Rights Reserved.</p>
+                    <p>© 2021 SilverStar. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
