@@ -17,7 +17,7 @@ if(isset($_POST["submit"])) {
 		mysqli_query($connection, "INSERT INTO galleryImages(magno, regdate, imagepath, delflag) VALUES('".$title1."','".$veregdate."','".$target_file."','0')");
 		echo "<script>
 		alert('Image added to Gallery Successfuly');
-		window.location.href='../Silverstar/real-wedding-list.php.php';
+		window.location.href='real-wedding-list.php.php';
 		</script>";  
 }
 ?>

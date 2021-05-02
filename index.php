@@ -192,7 +192,8 @@ while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     <i class="fa fa-star rate-mute"></i>
                                     </span>
                                         <span class="rating-count">(12)</span></span><br> -->
-                                        <span><a href="couple-form.php" class="btn btn-default btn-xl" style="font-size: 9px; background-color: #30336b; border-color: #30336b; color: white; border-radius: 5px; margin-right: 5px;">Upcoming Events</a><span><a href="couple-form.php" class="btn btn-default btn-xl" style="font-size: 9px; background-color: #FF6565; border-color: #FF6565; color: white; border-radius: 5px;">Video Gallery</a></span></span>
+                                        <span><a href="blog-listing.php" class="btn btn-default btn-xl" style="font-size: 9px; background-color: #30336b; border-color: #30336b; color: white; border-radius: 5px; margin-right: 5px;">Upcoming Events</a>
+                                        <span><a href="video-gallery.php" class="btn btn-default btn-xl" style="font-size: 9px; background-color: #FF6565; border-color: #FF6565; color: white; border-radius: 5px;">Video Gallery</a></span></span>
                                     </div>
                                     <!-- /.Vendor meta -->
                                 </div>
