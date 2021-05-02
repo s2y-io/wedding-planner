@@ -71,13 +71,25 @@ session_start();
                                         include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idguesttable) FROM guesttable WHERE cplid='".$_SESSION["coupleID"]."' AND delflag='0'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {
+                                            $tblcount = $row[0];
                                     ?>
                                     
                                     <h3 class="summary-title ">Table Seating</h3>
                                     <div class="summary-count"><?php echo $row[0]?></div>
-                                    <p class="summary-text">15 Seat remain</p>
+                                   
                                     <?php }?>
-                                
+
+                                    <?php
+                                        include "connection/DB.php";
+                                        $resultsetGetGuestlist = mysqli_query($connection, "SELECT COUNT(idnewguest) FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' AND delflag='0'");
+                                        while ($row = mysqli_fetch_row($resultsetGetGuestlist)) {
+                                            $guestCount =$row[0];
+                                    ?>
+                                    
+                                    <p class="summary-text"><?php echo $guestCount-$tblcount?> Seat remain</p>
+                                   
+                                    <?php }?>
+                                    
                             </div>
                             <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
                         </div>
@@ -85,10 +97,33 @@ session_start();
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                         <div class="card summary-block summary-guest-list">
                             <div class="card-body summary-content">
+                            <?php
+                                        include "connection/DB.php";
+                                        $resultsetGetGuestlist = mysqli_query($connection, "SELECT COUNT(idnewguest) FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' AND delflag='0'");
+                                        while ($row = mysqli_fetch_row($resultsetGetGuestlist)) {
+                                            $guestCount =$row[0];
+                                    ?>
+
+                                   
+                                   
                                 <h3 class="summary-title ">Guest List</h3>
-                                <div class="summary-count">300</div>
-                                <p class="summary-text">0 Accepted <span class="ml5">0 Declined</span></p>
-                            </div>
+                                <div class="summary-count"><?php echo $row[0]?></div><?php }?>
+
+                                <?php
+                                        include "connection/DB.php";
+                                        $resultsetGetacceptlist = mysqli_query($connection, "SELECT COUNT(idnewguest) FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' AND delflag='0' AND acceptflag='1'");
+                                        while ($row = mysqli_fetch_row($resultsetGetacceptlist)) {
+                                    ?>
+                                <p class="summary-text"><?php echo "$row[0]"?> Accepted <?php }?>
+                                    
+                                <?php
+                                        include "connection/DB.php";
+                                        $resultsetGetacceptlist = mysqli_query($connection, "SELECT COUNT(idnewguest) FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' AND delflag='0' AND declinedflag='1'");
+                                        while ($row = mysqli_fetch_row($resultsetGetacceptlist)) {
+                                    ?>
+                                     <span class="ml5"><?php echo "$row[0]"?> Declined</span></p><?php }?>
+                               
+                            </div> 
                             <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
                         </div>
                     </div>
@@ -96,9 +131,31 @@ session_start();
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                         <div class="card summary-block summary-todo">
                             <div class="card-body summary-content">
+                            <?php
+                                        include "connection/DB.php";
+                                        $resultsetGettodolist = mysqli_query($connection, "SELECT COUNT(idcpltodolist) FROM cpltodolist WHERE cpleID='".$_SESSION["coupleID"]."'");
+                                        while ($row = mysqli_fetch_row($resultsetGettodolist)) {
+                                    ?>
+
+                                   
+                                   
                                 <h3 class="summary-title ">Total To Do</h3>
-                                <div class="summary-count">12</div>
-                                <p class="summary-text">5 Complete <span class="ml5">7 remain</span></p>
+                                <div class="summary-count"><?php echo $row[0]?></div><?php }?>
+                                
+                                <?php
+                                        include "connection/DB.php";
+                                        $resultsetGetacceptcomlist = mysqli_query($connection, "SELECT COUNT(idcpltodolist) FROM cpltodolist WHERE cpleID='".$_SESSION["coupleID"]."' AND comflag='1'");
+                                        while ($row = mysqli_fetch_row($resultsetGetacceptcomlist)) {
+                                    ?>
+                                <p class="summary-text"><?php echo "$row[0]"?> Complete <?php }?>
+                                    
+                                <?php
+                                        include "connection/DB.php";
+                                        $resultsetGetaccepdeitlist = mysqli_query($connection, "SELECT COUNT(idcpltodolist) FROM cpltodolist WHERE cpleID='".$_SESSION["coupleID"]."' AND comflag='0'");
+                                        while ($row = mysqli_fetch_row($resultsetGetaccepdeitlist)) {
+                                    ?>
+                                     <span class="ml5"><?php echo "$row[0]"?> remain</span></p><?php }?>
+                            
                             </div>
                             <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
                         </div>
