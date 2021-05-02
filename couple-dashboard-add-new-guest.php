@@ -32,7 +32,7 @@
 
 <body class="body-bg">
     <div class="dashboard-header">
-          <?php include "../silverstar/cplemenu.php"?>
+          <?php include "cplemenu.php"?>
     </div>
     <div class="navbar-expand-lg">
         <button class="navbar-toggler" type="button" data-toggle="offcanvas">
@@ -40,7 +40,7 @@
         </button>
     </div>
     <div class="dashboard-wrapper">
-        <?php include "../silverstar/cplesidemenu.php"?>
+        <?php include "cplesidemenu.php"?>
         <div class="dashboard-content">
             <div class="container">
                 <div class="row">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <form action="../silverstar/controller/addnewguest.php" method="post">
+                        <form action="controller/addnewguest.php" method="post">
                             <div class="row">                                                              
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div class="form-group">

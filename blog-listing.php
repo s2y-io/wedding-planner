@@ -47,7 +47,7 @@
     </div>
     <!--/.header-top -->
     <!-- header -->
-    <?php include '../silverstar/headermenu.php';?>
+    <?php include 'headermenu.php';?>
     <!-- /.header -->
     <div class="offer-header" style="padding-top: 50px;">
         <!-- page-header -->
@@ -68,7 +68,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="row">
                         <?php 
-                   include "../silverstar/connection/DB.php";
+                   include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT * FROM exhibitions WHERE delflag='0'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) { 
                 ?>
@@ -76,7 +76,7 @@
                             <div class="post-block">
                                 <!-- post vertical block -->
                                 <div class="post-img zoomimg">
-                                    <a href="#" ><?php echo '<img src=../silverstar/admin/'.$row[7].' alt=""  class="img-fluid">'; ?></a>
+                                    <a href="#" ><?php echo '<img src=admin/'.$row[7].' alt=""  class="img-fluid">'; ?></a>
                                 </div>
                                 <div class="post-content" style="background-color: white;">
                                     <h2 class="post-heading"><a href="#" class="post-title"><?php echo $row[1];?></a></h2>

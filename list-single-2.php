@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="header">
-        <?php include '../silverstar/headermenu.php';
+        <?php include 'headermenu.php';
 ?>
     </div>
     <!-- page-header -->
@@ -99,7 +99,7 @@
         </div>
     </div>
     <?php
-                                        include "../silverstar/connection/DB.php";
+                                        include "connection/DB.php";
                                         $id = $_GET['id'];
                                         $resultsetGetlist = mysqli_query($connection, "SELECT * FROM newlisting WHERE idnewlisting='".$id."' AND approveflag='1' AND delflag='0'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {

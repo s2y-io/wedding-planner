@@ -35,7 +35,7 @@ session_start();
 
 <body class="body-bg">
     <div class="dashboard-header">
-        <?php include "../silverstar/cplemenu.php"?>
+        <?php include "cplemenu.php"?>
     </div>
     <div class="navbar-expand-lg">
         <button class="navbar-toggler" type="button" data-toggle="offcanvas">
@@ -43,7 +43,7 @@ session_start();
         </button>
     </div>
     <div class="dashboard-wrapper">
-        <?php include "../silverstar/cplesidemenu.php"?>
+        <?php include "cplesidemenu.php"?>
         <div class="dashboard-content">
             <div class="container">
                 <div class="row">
@@ -58,7 +58,7 @@ session_start();
                     <div class="offset-xl-8 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-right mb20">
                         <div id='slide-panel' class="slide-panel-light">
                             <h3>Create Task</h3>
-                            <form action="../silverstar/controller/todolistreg.php" method="post">
+                            <form action="controller/todolistreg.php" method="post">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6 col-6 ">
                                         <div class="form-group">
@@ -91,7 +91,7 @@ session_start();
                         <div id="accordion" class="todo">
                             <!-- accordion-card -->
                            <?php
-                                        include "../silverstar/connection/DB.php";
+                                        include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT * FROM cpltodolist WHERE cpleID='".$_SESSION["coupleID"]."' AND comflag='0' ORDER BY dodate");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     ?>
@@ -118,7 +118,7 @@ session_start();
                                                         </div>
                                                         <div class="col-xl-2 col-lg-2 col-md-4 col-sm-12 col-12">
                                                             <div class="todo-list-btn">
-                                                                <a href=../silverstar/controller/completetodo.php?id=<?php echo $row[0];?> class="btn btn-outline-violate btn-xs">Complete</a> 
+                                                                <a href=controller/completetodo.php?id=<?php echo $row[0];?> class="btn btn-outline-violate btn-xs">Complete</a> 
                                                             </div>
                                                         </div>
                                                     </div>
@@ -150,7 +150,7 @@ session_start();
                         <div id="accordion" class="todo">
                             <!-- accordion-card -->
                            <?php
-                                        include "../silverstar/connection/DB.php";
+                                        include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT * FROM cpltodolist WHERE cpleID='".$_SESSION["coupleID"]."' AND comflag='1' ORDER BY dodate");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     ?>
@@ -177,7 +177,7 @@ session_start();
                                                         </div>
                                                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                                             <div class="todo-list-btn">
-                                                                 <a href=../silverstar/controller/deletetodo.php?id=<?php echo $row[0];?> class="btn btn-outline-pink btn-xs">Delete</a>
+                                                                 <a href=controller/deletetodo.php?id=<?php echo $row[0];?> class="btn btn-outline-pink btn-xs">Delete</a>
                                                             </div>
                                                         </div>
                                                     </div>

@@ -33,7 +33,7 @@ session_start();
 
 <body class="body-bg">
     <div class="dashboard-header">
-        <?php include "../silverstar/cplemenu.php"?>
+        <?php include "cplemenu.php"?>
     </div>
     <div class="navbar-expand-lg">
         <button class="navbar-toggler" type="button" data-toggle="offcanvas">
@@ -41,7 +41,7 @@ session_start();
         </button>
     </div>
     <div class="dashboard-wrapper">
-        <?php include "../silverstar/cplesidemenu.php"?>
+        <?php include "cplesidemenu.php"?>
         <div class="dashboard-content">
             <div class="container">
                 <div class="row">
@@ -56,7 +56,7 @@ session_start();
                     <div class="offset-xl-8 col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-right mb20">
                         <div id='slide-panel' class="slide-panel-light">
                             <h3>Create Table</h3>
-                            <form action="../silverstar/controller/addnewguesttable.php" method="POST">
+                            <form action="controller/addnewguesttable.php" method="POST">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6 col-6 ">
                                         <div class="form-group">
@@ -70,7 +70,7 @@ session_start();
                                         <select class="form-control mb20" name="gustname">
                                             <option value="0" data-display="Select Guest">Select Guest</option>
                                              <?php
-                                                    include "../silverstar/connection/DB.php";
+                                                    include "connection/DB.php";
                                                     $resultsetGetProvince = mysqli_query($connection, "SELECT * FROM newguest WHERE declinedflag='0'");
                                                     while ($row = mysqli_fetch_row($resultsetGetProvince)) {
                                                         
@@ -105,13 +105,13 @@ session_start();
                                 </thead>
                                 <tbody>
                                      <?php
-                                                    include "../silverstar/connection/DB.php";
+                                                    include "connection/DB.php";
                                                     $resultsetGetGuest = mysqli_query($connection, "SELECT * FROM guesttable gt INNER JOIN newguest ng WHERE gt.guestname = ng.idnewguest AND gt.delflag='0' AND ng.declinedflag='1'  AND gt.cplid='".$_SESSION["coupleID"]."' AND ng.cuplid='".$_SESSION["coupleID"]."' ORDER BY tableno");
                                                     while ($row = mysqli_fetch_row($resultsetGetGuest)) { ?>
                                     <tr>
                                         <td class="seating-guest-name"><?php echo $row[6]?></td>
                                         <td class="seating-guest-name"><?php echo $row[2]?></td>
-                                        <td class="seating-table-action"><a href=../silverstar/controller/deletetableguest.php?id=<?php echo $row[0];?>&gid=<?php echo $row[5];?> class="btn btn-outline-pink btn-xs">Delete</a></td>
+                                        <td class="seating-table-action"><a href=controller/deletetableguest.php?id=<?php echo $row[0];?>&gid=<?php echo $row[5];?> class="btn btn-outline-pink btn-xs">Delete</a></td>
                                     </tr>
                                      <?php }?>
                                 </tbody>
