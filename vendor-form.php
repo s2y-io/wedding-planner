@@ -58,7 +58,7 @@
                                         <p>Join Weddings to get your business listed or to claim your listing.</p>
                                     </div>
                                     <!-- /.vendor title -->
-                                    <form action="../silverstar/controller/vendereg.php" method="post">
+                                    <form action="controller/vendereg.php" method="post">
                                         <div class="row">
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                                <!-- Text input-->
@@ -116,7 +116,7 @@
                                                     <select class="wide mb10" name="province" id="province">
                                                          <option value="0">Select Province</option>
                                                         <?php
-                                                    include "../silverstar/connection/DB.php";
+                                                    include "connection/DB.php";
                                                     $resultsetGetProvince = mysqli_query($connection, "SELECT * FROM province");
                                                     while ($row = mysqli_fetch_row($resultsetGetProvince)) {
                                                         ?>
@@ -132,7 +132,7 @@
                                                 <!-- select -->
                                                 <div class="form-group">
                                                     <?php
-                                                    include "../silverstar/connection/DB.php";
+                                                    include "connection/DB.php";
                                                     $sql = "SELECT * FROM district";
                                                         $result4 = mysqli_query($connection, $sql);
 
@@ -165,7 +165,7 @@
                                         <p>Join Weddings to get your business listed or to claim your listing.</p>
                                     </div>
                                     <!--/.vendor-title -->
-                                    <form action="../silverstar/controller/venlogin.php" method="post">
+                                    <form action="controller/venlogin.php" method="post">
                                         <div class="row">
                                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                               <!-- Text input-->

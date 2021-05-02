@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>-->
-<?php include '../silverstar/headermenu.php';
+<?php include 'headermenu.php';
 ?>
 
     <div class="container" style="margin-top: 25px;">
@@ -149,7 +149,7 @@
             <div class="venue-thumbnail-carousel">
                 <div class="owl-carousel owl-theme owl-venue-thumb">
  <?php
-include "../silverstar/connection/DB.php";
+include "connection/DB.php";
 $resultsetGetlist = mysqli_query($connection, "SELECT * FROM newlisting WHERE delflag='0' AND topflag='1' AND approveflag='1'");
 while ($row = mysqli_fetch_row($resultsetGetlist)) {
     ?>
@@ -228,13 +228,13 @@ while ($row = mysqli_fetch_row($resultsetGetlist)) {
                 <!-- venue-categoris-block-->
 
                 <?php
-include "../silverstar/connection/DB.php";
+include "connection/DB.php";
 $resultsetGetlist = mysqli_query($connection, "SELECT * FROM vendorcat WHERE delflag='0'");
 while ($row = mysqli_fetch_row($resultsetGetlist)) {
     ?>
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12">
                     <div class="venue-categories-block zoomimg">
-                        <div class="venue-categories-img"> <a href="list-grid-view.php"><?php echo '<img src=../silverstar/admin/' . $row[2] . ' alt=""  class="img-fluid">'; ?></a>
+                        <div class="venue-categories-img"> <a href="list-grid-view.php"><?php echo '<img src=admin/' . $row[2] . ' alt=""  class="img-fluid">'; ?></a>
                             <div class="venue-categories-overlay">
                                 <h3 class="mb0"><a href="list-grid-view.php" class="venue-categories-title"><?php echo $row[1]; ?></a></h3>
                             </div>
@@ -409,14 +409,14 @@ while ($row = mysqli_fetch_row($resultsetGetlist)) {
             </div>
             <div class="row">
             <?php 
-                   include "../silverstar/connection/DB.php";
+                   include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT * FROM exhibitions WHERE delflag='0'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) { 
                 ?>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="post-block text-center">
                         <div class="post-img mb30 zoomimg">
-                            <a href="blog-listing.php" ><?php echo '<img src=../silverstar/admin/'.$row[7].' alt=""  class="img-fluid">'; ?></a>
+                            <a href="blog-listing.php" ><?php echo '<img src=admin/'.$row[7].' alt=""  class="img-fluid">'; ?></a>
                         </div>
                         <h2 class="post-heading">
                             <a href="blog-listing.php" class="post-title"><?php echo $row[1];?></a>

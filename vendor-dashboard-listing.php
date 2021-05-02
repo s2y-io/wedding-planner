@@ -85,7 +85,7 @@ session_start();
                     <li><a href="vendor-dashboard-request-quote.php"><span class="dash-nav-icon"><i class="fas fa-edit"></i></span>Request Quotes</a></li>
                     <li><a href="vendor-dashboard-reviews.php"><span class="dash-nav-icon"><i class="fas fa-comments"></i></span>Reviews </a></li>
                     
-                    <li><a href="../silverstar/controller/logout.php"><span class="dash-nav-icon"><i class="fas fa-sign-out-alt"></i></span>Logout</a></li>
+                    <li><a href="controller/logout.php"><span class="dash-nav-icon"><i class="fas fa-sign-out-alt"></i></span>Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -116,7 +116,7 @@ session_start();
                                 </thead>
                                 <tbody>
                                      <?php
-                                        include "../silverstar/admin/connection/DB.php";
+                                        include "admin/connection/DB.php";
 
                                         $resultsetGetList = mysqli_query($connection, "SELECT * FROM newlisting WHERE approveflag='1' AND venid='".$_SESSION["vendorID"]."' AND delflag='0'");
                                         while ($row = mysqli_fetch_row($resultsetGetList)) {
@@ -126,7 +126,7 @@ session_start();
                                         <td class="wedding-date"><?php echo $row[2];?></td>
                                         <td class="requester-id"><?php echo $row[3];?></td>
                                         <td class="requester-phone"><?php echo $row[17];?></td>
-                                        <td class="requester-action"><a href=../silverstar/controller/deletelisting.php?id=<?php echo $row[0];?> class="btn btn-outline-pink btn-xs ">Delete</a></td>
+                                        <td class="requester-action"><a href=controller/deletelisting.php?id=<?php echo $row[0];?> class="btn btn-outline-pink btn-xs ">Delete</a></td>
                                     </tr>
                                 <?php } ?>
                                 </tbody>

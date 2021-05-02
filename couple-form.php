@@ -60,7 +60,7 @@
                                         <p>We don't post anything without your permission.</p>
                                         <!-- /.form-heading-title -->
                                         <!-- register-form -->
-                                        <form action="../silverstar/controller/couplereg.php" method="POST">
+                                        <form action="controller/couplereg.php" method="POST">
                                             <!-- form -->
                                             <div class="row">
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
@@ -112,7 +112,7 @@
                                         <p>Sign in to plan your perfect day with our planning tools and inspiration more...</p>
                                         <!-- /.login-form-heading-title  -->
                                         <!-- login-form-->
-                                        <form action="../silverstar/controller/couplelogin.php" method="POST">
+                                        <form action="controller/couplelogin.php" method="POST">
                                             <div class="row">
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
                                                     <!-- Text input-->

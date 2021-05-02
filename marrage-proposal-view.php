@@ -48,7 +48,7 @@
     </div>
     <!--/.header-top -->
     <!-- header -->
-    <?php include '../silverstar/headermenu.php';?>
+    <?php include 'headermenu.php';?>
     <!-- /.header -->
     <div class="page-header">
         <!-- page-header -->
@@ -80,7 +80,7 @@
             </div>
             <div class="row">
                  <?php 
-                   include "../silverstar/connection/DB.php";
+                   include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT * FROM proposaltbl WHERE delflag='0'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) { 
                 ?>
@@ -88,7 +88,7 @@
                     <div class="well-box testimonial-block">
                         <!-- testimonial block -->
                         <div class="testimonial-icon"> <i class="fa fa-quote-right fa-default"></i></div>
-						<div class="testimonial-pic"><?php echo '<img src=../silverstar/admin/'.$row[11].' alt=""  class="rounded-circle">'; ?></div>
+						<div class="testimonial-pic"><?php echo '<img src=admin/'.$row[11].' alt=""  class="rounded-circle">'; ?></div>
                         <h3 class="testimonial-name"><?php echo $row[1];?></h3>
 						<center>
 							<div>

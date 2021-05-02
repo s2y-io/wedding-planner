@@ -35,7 +35,7 @@ session_start();
 
 <body class="body-bg">
     <div class="dashboard-header">
-        <?php include "../silverstar/cplemenu.php"?>
+        <?php include "cplemenu.php"?>
     </div>
     <div class="navbar-expand-lg">
         <button class="navbar-toggler" type="button" data-toggle="offcanvas">
@@ -43,7 +43,7 @@ session_start();
         </button>
     </div>
     <div class="dashboard-wrapper">
-         <?php include "../silverstar/cplesidemenu.php"?>
+         <?php include "cplesidemenu.php"?>
         <div class="dashboard-content">
             <div class="container">
                 <div class="row">
@@ -65,7 +65,7 @@ session_start();
                             <div class="card summary-block rsvp-summary bg-light-violate">
                                 <div class="card-body summary-content">
                                      <?php
-                                        include "../silverstar/connection/DB.php";
+                                        include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idnewguest) FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' ");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     ?>
@@ -79,7 +79,7 @@ session_start();
                             <div class="card summary-block rsvp-summary bg-light-green">
                                 <div class="card-body summary-content">
                                     <?php
-                                        include "../silverstar/connection/DB.php";
+                                        include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idnewguest) FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' AND inviteflag='1'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     ?>
@@ -93,7 +93,7 @@ session_start();
                             <div class="card summary-block rsvp-summary bg-light-yellow">
                                 <div class="card-body summary-content">
                                     <?php
-                                        include "../silverstar/connection/DB.php";
+                                        include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idnewguest) FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' AND inviteflag='1' AND acceptflag='1'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     ?>
@@ -105,7 +105,7 @@ session_start();
                         </div>
                         
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <p><a href=../silverstar/controller/export_csv.php?id=<?php echo $row[0];?> class="download-list-link ml30 mr10" download>Download Guest List</a>
+                            <p><a href=controller/export_csv.php?id=<?php echo $row[0];?> class="download-list-link ml30 mr10" download>Download Guest List</a>
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@ session_start();
                                     </thead>
                                     <tbody>
                                          <?php
-                                        include "../silverstar/connection/DB.php";
+                                        include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT * FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' AND inviteflag='0'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     ?>
@@ -146,7 +146,7 @@ session_start();
                                             <td class="guest-rsvp"><?php echo $row[5];?></td>
                                             <td class="guest-email-id"><?php echo $row[2];?></td>
                                             <td class="guest-invite"><?php echo $row[4];?></td>
-                                            <td class="guest-action"><a href=../silverstar/controller/guestinvite.php?id=<?php echo $row[0];?> class="btn btn-outline-violate btn-xs mr10">Invite</a></td>
+                                            <td class="guest-action"><a href=controller/guestinvite.php?id=<?php echo $row[0];?> class="btn btn-outline-violate btn-xs mr10">Invite</a></td>
                                         </tr>
                                     <?php }?>
                                     </tbody>
@@ -179,7 +179,7 @@ session_start();
                                     </thead>
                                     <tbody>
                                          <?php
-                                        include "../silverstar/connection/DB.php";
+                                        include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT * FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' AND inviteflag='1' AND acceptflag='0'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     ?>
@@ -189,7 +189,7 @@ session_start();
                                             <td class="guest-rsvp"><?php echo $row[5];?></td>
                                             <td class="guest-email-id"><?php echo $row[2];?></td>
                                             <td class="guest-invite"><?php echo $row[4];?></td>
-                                            <td class="guest-action"><a href=../silverstar/controller/guestaccept.php?id=<?php echo $row[0];?> class="btn btn-outline-pink btn-xs">Accepted</a></td>
+                                            <td class="guest-action"><a href=controller/guestaccept.php?id=<?php echo $row[0];?> class="btn btn-outline-pink btn-xs">Accepted</a></td>
                                         </tr>
                                     <?php }?>
                                     </tbody>
@@ -221,7 +221,7 @@ session_start();
                                     </thead>
                                     <tbody>
                                          <?php
-                                        include "../silverstar/connection/DB.php";
+                                        include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT * FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' AND inviteflag='1' AND acceptflag='1'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     ?>
