@@ -48,8 +48,8 @@ session_start();
                     <div class="col-xl-12 col-lg-10 col-md-9 col-sm-12 col-12">
                         <div class="dashboard-page-header">
 
-                            <h3 class="dashboard-page-title">Hi, Vendor.</h3>
-                            <p class="d-block">Here’s what’s happening with your wedding venue business today.</p>
+                            <h3 class="dashboard-page-title">Hi, <?php echo $_SESSION["userfname"]?></h3>
+                            <p class="d-block">Here’s what’s happening with your wedding venue business today</p>
                         </div>
                     </div>
                 </div>

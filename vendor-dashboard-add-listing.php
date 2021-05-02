@@ -46,14 +46,14 @@ session_start();
                     <div class="user-vendor">
                         <div class="dropdown">
                             <a class="dropdown-toggle" id="dropdownMenuButton" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <span class="user-icon">  <img src="./images/admin-pic.jpg" alt="" class="rounded-circle mb10"></span><span class="user-vendor-name"><?php echo $_SESSION["venUsername"]?></span>
+                           <span class="user-icon">  <img src="" alt="" class="rounded-circle mb10"></span><span class="user-vendor-name"><?php echo $_SESSION["venUsername"]?></span>
                         </a>
                             <div class=" dashboard-dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="vendor-dashboard-overview.php">Dashboard</a>
                                 <a class="dropdown-item" href="vendor-dashboard-listing.php"> My Listed Item </a>
                                 <!--<a class="dropdown-item" href="vendor-dashboard-pricing.html">Pricing Plan</a>-->
                                 <a class="dropdown-item" href="vendor-dashboard-request-quote.php">Request Quotes</a>
-                                <a class="dropdown-item" href="vendor-dashboard-reviews.php">Reviews </a>
+                                <!-- <a class="dropdown-item" href="vendor-dashboard-reviews.php">Reviews </a> -->
                                 <a class="dropdown-item" href="index.php">Log Out</a>
                             </div>
                         </div>
@@ -69,11 +69,10 @@ session_start();
     </div>
     <div class="dashboard-wrapper">
         <div class="dashboard-sidebar offcanvas-collapse">
-            <div class="vendor-user-profile">
+            <div class="vendor-user-profile" style="margin-top:10px;">
                 <div class="vendor-profile-img">
-                    <img src="./images/admin-pic.jpg" alt="" class="rounded-circle"></div>
-                <h3 class="vendor-profile-name"><?php echo $_SESSION["venUsername"]?></h3>
-                <a href="#" class="edit-link">edit profile</a>
+                    <img src="./images/user-icon2.jpeg" alt="" class="rounded-circle"></div>
+                <h2 class="vendor-profile-name" style="margin-top:20px;"><?php echo $_SESSION["busname"]?></h2>
             </div>
             <div class="dashboard-nav">
                 <ul class="list-unstyled">
@@ -82,7 +81,7 @@ session_start();
                      <li><a href="vendor-dashboard-add-images.php"><span class="dash-nav-icon"><i class="fas fa-list-alt"></i> </span>Add Images</a>
                     <!--<li><a href="vendor-dashboard-pricing.html"><span class="dash-nav-icon"><i class="fas fa-calculator"></i></span>Pricing Plan</a></li>-->
                     <li><a href="vendor-dashboard-request-quote.php"><span class="dash-nav-icon"><i class="fas fa-edit"></i></span>Request Quotes</a></li>
-                    <li><a href="vendor-dashboard-reviews.php"><span class="dash-nav-icon"><i class="fas fa-comments"></i></span>Reviews </a></li>
+                    <!-- <li><a href="vendor-dashboard-reviews.php"><span class="dash-nav-icon"><i class="fas fa-comments"></i></span>Reviews </a></li> -->
                     
                     <li><a href="controller/logout.php"><span class="dash-nav-icon"><i class="fas fa-sign-out-alt"></i></span>Logout </a></li>
                 </ul>

@@ -4,7 +4,7 @@
  <div class="dashboard-sidebar offcanvas-collapse">
             <div class="vendor-user-profile">
                 <div class="vendor-profile-img">
-                    <img src="../images/admin-pic.jpg" alt="" class="rounded-circle"></div>
+                    <img src="../images/user-icon3.jpeg" alt="" class="rounded-circle"></div>
                 <h3 class="vendor-profile-name" style="padding-top:15px;"><?php echo $_SESSION["userfname"]?></h3>
                 
             </div>

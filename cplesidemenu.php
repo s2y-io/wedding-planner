@@ -4,8 +4,8 @@
 <div class="dashboard-sidebar offcanvas-collapse">
             <div class="vendor-user-profile">
                 <div class="vendor-profile-img">
-                    <img src="" alt="" class="rounded-circle"></div>
-                <h2 class="vendor-profile-name"><?php //echo $_SESSION["cplename"]?></h2>
+                    <img src="./images/user-icon.png" alt="" class="rounded-circle"></div>
+                <h2 class="vendor-profile-name"><?php echo $_SESSION["cplename"]?></h2>
             </div>
             <div class="dashboard-nav">
                 <ul class="list-unstyled">
@@ -16,7 +16,7 @@
                     <li><a href="couple-dashboard-guest-manager.php"><span class="dash-nav-icon"><i class="fas fa-users"></i></span>Guestlist </a></li>
                     <li><a href="couple-dashboard-table-planner.php"><span class="dash-nav-icon"><i class="fas fa-table"></i></span>Seating Table </a></li>
                     <!--<li><a href="couple-dashboard-profile.php"><span class="dash-nav-icon"><i class="fas fa-user-circle"></i></span>My Profile </a></li>-->
-                    <li><a href="../silverstar/controller/logout.php"><span class="dash-nav-icon"><i class="fas fa-sign-out-alt"></i></span>Log Out </a></li>
+                    <li><a href="controller/logout.php"><span class="dash-nav-icon"><i class="fas fa-sign-out-alt"></i></span>Log Out </a></li>
                 </ul>
             </div>
         </div>

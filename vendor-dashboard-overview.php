@@ -43,7 +43,7 @@ session_start();
                     <div class="user-vendor">
                         <div class="dropdown">
                             <a class="dropdown-toggle" id="dropdownMenuButton" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <span class="user-icon">  <img src="./images/dashboard-profile.jpg" alt="" class="rounded-circle mb10"></span><span class="user-vendor-name"><?php echo $_SESSION["busname"]?></span> 
+                           <span class="user-icon">  <img src="" alt="" class="rounded-circle mb10"></span><span class="user-vendor-name"><?php echo $_SESSION["busname"]?></span> 
                         </a>
                             <div class=" dashboard-dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="vendor-dashboard-overview.php">Dashboard</a>
@@ -66,11 +66,10 @@ session_start();
     </div>
     <div class="dashboard-wrapper">
         <div class="dashboard-sidebar offcanvas-collapse">
-            <div class="vendor-user-profile">
+            <div class="vendor-user-profile" style="margin-top:10px;">
                 <div class="vendor-profile-img">
-                    <img src="" alt="" class="rounded-circle"></div>
-                <h3 class="vendor-profile-name"><?php echo $_SESSION["busname"]?></h3>
-                <!--<a href="#" class="edit-link">edit profile</a>-->
+                    <img src="./images/user-icon2.jpeg" alt="" class="rounded-circle"></div>
+                <h2 class="vendor-profile-name" style="margin-top:20px;"><?php echo $_SESSION["busname"]?></h2>
             </div>
             <div class="dashboard-nav">
                 <ul class="list-unstyled">
@@ -91,7 +90,7 @@ session_start();
                     <div class="col-xl-12 col-lg-10 col-md-9 col-sm-12 col-12">
                         <div class="dashboard-page-header">
 
-                            <h3 class="dashboard-page-title">Hi, Vendor.</h3>
+                            <h3 class="dashboard-page-title">Hi, <?php echo $_SESSION["busname"]?></h3>
                             <p class="d-block">Here’s what’s happening with your wedding venue business today.</p>
                         </div>
                     </div>

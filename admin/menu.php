@@ -12,9 +12,9 @@
                     <div class="user-vendor">
                         <div class="dropdown">
                             <a class="dropdown-toggle" id="dropdownMenuButton" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <span class="user-icon">  <img src="../images/dashboard-profile.jpg" alt="" class="rounded-circle mb10"></span><span class="user-vendor-name"><?php echo $_SESSION["userfname"]?></span> 
+                           <span class="user-icon">  <img src="" alt="" class="rounded-circle mb10"></span><span class="user-vendor-name"><?php echo $_SESSION["userfname"]?></span> 
                         </a>
-                            <!--<div class=" dashboard-dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <div class=" dashboard-dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="admin-dashboard-overview.php">Dashboard</a>
                                 <a class="dropdown-item" href="admin-dashboard-listing.php"> My Listed Item </a>
                                 <a class="dropdown-item" href="vendor-dashboard-pricing.html">Pricing Plan</a>
@@ -22,7 +22,7 @@
                                 <a class="dropdown-item" href="admin-dashboard-reviews.php">Reviews </a>
                                 <a class="dropdown-item" href="admin-dashboard-profile.php">My Profile </a>
                                 <a class="dropdown-item" href="index.php">Log Out</a>
-                            </div>-->
+                            </div>
                         </div>
                     </div>
                 </div>
