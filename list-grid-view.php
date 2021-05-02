@@ -47,7 +47,7 @@
     </div>
     <!--/.header-top -->
      <!-- header -->
-    <?php include 'headermenu.php';
+    <?php include '../silverstar/headermenu.php';
     ?>
      <!-- header -->
     <!-- page header -->
@@ -71,7 +71,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <form class="row">
                         <!-- venue-type -->
-                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
                             <select class="wide">
                                             <option value="Venue Type" data-display="Select Province">Select Province</option>
                                             <option value="Hotel">Central</option>
@@ -84,10 +84,10 @@
                                             <option value="In Door">Uva</option>
                                             <option value="In Door">Western</option>
                                         </select>
-                        </div>
+                        </div> -->
                         <!-- /.venue-type -->
                         <!-- distance km -->
-                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
                             <select class="wide">
                                             <option value="Ahmedabad" data-display="Select District">Select District</option>
                                             <option value="Hotel">Ampara</option>
@@ -106,20 +106,20 @@
                                             <option value="In Door">Kurunegala</option>
                                             <option value="In Door">Mannar</option>
                                         </select>
-                        </div>
+                        </div> -->
                         <!-- /.distance km -->
                         <!-- price -->
-                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
                             <select class="wide">
-                                            <option value="Ahmedabad" data-display="Vendor Category">Vendor Category</option>
-                                            <option value="Hotel">Hotels</option>
-                                            <option value="Restaurant">Restaurant</option>
-                                            <option value="Castle">Castle</option>
-                                            <option value="Barns">Barns</option>
-                                            <option value="Resort">Resort</option>
-                                            <option value="Church">Church</option>
-                                            <option value="Photograpers">Photograpers</option>
-                                            <option value="Astrologers">Astrologers</option>
+                                <option value="Ahmedabad" data-display="Vendor Category">Vendor Category</option>
+                            <?php
+                                        include "../silverstar/connection/DB.php";
+                                        $resultsetGetCatlist = mysqli_query($connection, "SELECT * FROM vendorcat WHERE delflag='0'");
+                                        while ($row = mysqli_fetch_row($resultsetGetCatlist)) {
+                                    ?>
+                                            
+                                            <option value="<?php echo $row[1];?>"><?php echo $row[1];?></option>
+                                            <?php } ?>
                                         </select>
                         </div>
                         <!-- /.price -->
@@ -214,7 +214,7 @@
                         
                 <div class="row">
                      <?php
-                                        include "connection/DB.php";
+                                        include "../silverstar/connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT * FROM newlisting WHERE approveflag='1' AND delflag='0'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     ?>
@@ -298,7 +298,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                     <!-- footer-widget -->
                     <div class="footer-widget">
-                        <a href="#"><img src="images/logo.png" alt="" class="mb20"></a>
+                        <a href="#"><img src="images/logo1.png" alt="" class="mb20"></a>
                         <p class="mb10">Bring the vision of brides and grooms to life by planning, organizing and overseeing all aspects of the wedding ceremony, reception and, often, the honeymoon.</p>
                     </div>
                 </div>
