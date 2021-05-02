@@ -98,10 +98,18 @@ session_start();
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                         <div class="card card-summary">
-                            <div class="card-body">
+                        <div class="card-body">
                                 <div class="float-left">
-                                <div class="summary-count">6</div>
-                                <p>Total Listed Item</p>
+                                <?php
+                                include "connection/DB.php";
+                                $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idnewlisting) FROM newlisting WHERE venid='".$_SESSION["vendorID"]."' AND delflag='0'");
+                                while ($row = mysqli_fetch_row($resultsetGetlist)) {
+                                    ?>
+                                    <div class="summary-count"><?php echo $row[0] ?></div>
+                                <p>Listed Services</p>
+
+                                    <?php }?>
+
                             </div>
                                   <div class="summary-icon"><i class="icon-051-wedding-arch"></i></div>
 
@@ -112,14 +120,22 @@ session_start();
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                         <div class="card card-summary">
-                            <div class="card-body">
+                        <div class="card-body">
                                 <div class="float-left">
-                                <div class="summary-count">2</div>
-                                <p>Request Quote</p>
+                                <?php
+                                include "connection/DB.php";
+                                $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idnewlisting) FROM newlisting WHERE venid='".$_SESSION["vendorID"]."' AND delflag='0'");
+                                while ($row = mysqli_fetch_row($resultsetGetlist)) {
+                                    ?>
+                                    <div class="summary-count"><?php echo $row[0] ?></div>
+                                <p>Requested Quotes</p>
+
+                                    <?php }?>
+
                             </div>
                                   <div class="summary-icon"><i class="icon-021-love-1"></i></div>
                             </div>
-                            <div class="card-footer text-center"><a href="#">View All</a></div>
+                            <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
