@@ -80,7 +80,7 @@ session_start();
                     <li><a href="vendor-dashboard-request-quote.php"><span class="dash-nav-icon"><i class="fas fa-edit"></i></span>Request Quotes</a></li>
                     <!-- <li><a href="vendor-dashboard-reviews.php"><span class="dash-nav-icon"><i class="fas fa-comments"></i></span>Reviews </a></li> -->
                     
-                    <li><a href="../silverstar/controller/logout.php"><span class="dash-nav-icon"><i class="fas fa-sign-out-alt"></i></span>Logout </a></li>
+                    <li><a href="controller/logout.php"><span class="dash-nav-icon"><i class="fas fa-sign-out-alt"></i></span>Logout </a></li>
                 </ul>
             </div>
         </div>
@@ -96,7 +96,7 @@ session_start();
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <form action="../silverstar/controller/addgalleryimages.php" method="post" enctype="multipart/form-data">
+                        <form action="controller/addgalleryimages.php" method="post" enctype="multipart/form-data">
                             <!-- Form Name -->
                             <div class="venue-form-info">
                                 <div class="row">
