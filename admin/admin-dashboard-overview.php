@@ -48,7 +48,7 @@ session_start();
                     <div class="col-xl-12 col-lg-10 col-md-9 col-sm-12 col-12">
                         <div class="dashboard-page-header">
 
-                            <h3 class="dashboard-page-title">Hi, <?php echo $_SESSION["userfname"]?></h3>
+                            <h3 class="dashboard-page-title">Hi, <?php echo $_SESSION["userfname"] ?></h3>
                             <p class="d-block">Here’s what’s happening with your wedding venue business today</p>
                         </div>
                     </div>
@@ -58,39 +58,122 @@ session_start();
                         <div class="card card-summary">
                             <div class="card-body">
                                 <div class="float-left">
-                                <div class="summary-count">6</div>
-                                <p>Total Listed Item</p>
+                                <?php
+                                include "connection/DB.php";
+                                $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idnewlisting) FROM newlisting WHERE delflag='0'");
+                                while ($row = mysqli_fetch_row($resultsetGetlist)) {
+                                    ?>
+                                    <div class="summary-count"><?php echo $row[0] ?></div>
+                                <p>Total Listed Vendors</p>
+
+                                    <?php }?>
+
                             </div>
                                   <div class="summary-icon"><i class="icon-051-wedding-arch"></i></div>
 
                             </div>
-                              <div class="card-footer text-center"><a href="#">View All</a></div>
-                           
+                              <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
+
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                         <div class="card card-summary">
-                            <div class="card-body">
+                        <div class="card-body">
                                 <div class="float-left">
-                                <div class="summary-count">2</div>
-                                <p>Request Quote</p>
+                                <?php
+                                include "connection/DB.php";
+                                $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idnewlisting) FROM newlisting WHERE approveflag='1'");
+                                while ($row = mysqli_fetch_row($resultsetGetlist)) {
+                                    ?>
+                                    <div class="summary-count"><?php echo $row[0] ?></div>
+                                <p>Total Approved Vendors</p>
+
+                                    <?php }?>
+
                             </div>
                                   <div class="summary-icon"><i class="icon-021-love-1"></i></div>
                             </div>
-                            <div class="card-footer text-center"><a href="#">View All</a></div>
+                            <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                         <div class="card card-summary">
-                            <div class="card-body">
+                        <div class="card-body">
                                 <div class="float-left">
-                                <div class="summary-count">1</div>
-                                <p>Your Reviews</p>
+                                <?php
+                                include "connection/DB.php";
+                                $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idnewlisting) FROM newlisting WHERE topflag='1'");
+                                while ($row = mysqli_fetch_row($resultsetGetlist)) {
+                                    ?>
+                                    <div class="summary-count"><?php echo $row[0] ?></div>
+                                <p>Total Top Rated Vendors</p>
+
+                                    <?php }?>
 
                             </div>
                               <div class="summary-icon"><i class="icon-004-chat"></i></div>
                             </div>
-                            <div class="card-footer text-center"><a href="#">View All</a></div>
+                            <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="card card-summary">
+                        <div class="card-body">
+                                <div class="float-left">
+                                <?php
+                                include "connection/DB.php";
+                                $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idvendorcat) FROM vendorcat WHERE delflag='0'");
+                                while ($row = mysqli_fetch_row($resultsetGetlist)) {
+                                    ?>
+                                    <div class="summary-count"><?php echo $row[0] ?></div>
+                                <p>Total Added Categories</p>
+
+                                    <?php }?>
+
+                            </div>
+                              <div class="summary-icon"><i class="icon-004-chat"></i></div>
+                            </div>
+                            <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="card card-summary">
+                        <div class="card-body">
+                                <div class="float-left">
+                                <?php
+                                include "connection/DB.php";
+                                $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idexhibitions) FROM exhibitions WHERE delflag='0'");
+                                while ($row = mysqli_fetch_row($resultsetGetlist)) {
+                                    ?>
+                                    <div class="summary-count"><?php echo $row[0] ?></div>
+                                <p>Total Added Events</p>
+
+                                    <?php }?>
+
+                            </div>
+                              <div class="summary-icon"><i class="icon-004-chat"></i></div>
+                            </div>
+                            <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="card card-summary">
+                        <div class="card-body">
+                                <div class="float-left">
+                                <?php
+                                include "connection/DB.php";
+                                $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idofferstbl) FROM offerstbl WHERE delflag='0'");
+                                while ($row = mysqli_fetch_row($resultsetGetlist)) {
+                                    ?>
+                                    <div class="summary-count"><?php echo $row[0] ?></div>
+                                <p>Total Added Offers</p>
+
+                                    <?php }?>
+
+                            </div>
+                              <div class="summary-icon"><i class="icon-004-chat"></i></div>
+                            </div>
+                            <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
                         </div>
                     </div>
                 </div>
@@ -111,7 +194,7 @@ session_start();
     <script src="../js/custom-script.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/offcanvas.js"></script>
-    
+
 </body>
 
 </html>
