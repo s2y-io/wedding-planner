@@ -226,7 +226,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12">
                     <div class="">
                         <div class="well-box-dark">
-                            <form>
+                            <form action="controller/makerequest.php" method="post">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <h3 class="mb30">Request Quote</h3>
@@ -235,21 +235,21 @@
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <div class="form-group">
                                             <label class="control-label sr-only" for="name">Name</label>
-                                            <input id="name" name="name" type="text" placeholder="Name" class="form-control " required="">
+                                            <input id="name" name="cusname" type="text" placeholder="Name" class="form-control " required="">
                                         </div>
                                     </div>
                                     <!-- Text input-->
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <div class="form-group">
                                             <label class=" control-label sr-only" for="email">Email</label>
-                                            <input id="email" name="email" type="text" placeholder="Email" class="form-control " required="">
+                                            <input id="email" name="cusemail" type="text" placeholder="Email" class="form-control " required="">
                                         </div>
                                     </div>
                                     <!-- Text input-->
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <div class="form-group">
                                             <label class=" control-label sr-only" for="phone">Phone</label>
-                                            <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control " required="">
+                                            <input id="phone" name="cusphone" type="text" placeholder="Phone" class="form-control " required="">
                                         </div>
                                     </div>
                                     <!-- Text input-->
@@ -269,7 +269,7 @@
                                     </div>
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-default btn-block">Submit Quote</button>
+                                            <button type="submit" name="submit" class="btn btn-default btn-block">Submit Quote</button>
                                         </div>
                                     </div>
                             </form>
