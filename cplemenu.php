@@ -12,11 +12,11 @@
                     <div class="user-vendor">
                         <div class="dropdown">
                             <a class=" dropdown-toggle" id="dropdownMenuButton" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <span class="user-icon">  <img src="./images/dashboard-profile-couple.jpg" alt="" class="rounded-circle mb10"></span><span class="user-vendor-name"><?php //echo $_SESSION["cplename"]?></span> 
+                          <span class="user-icon">  <img src="" alt="" class="rounded-circle mb10"></span><span class="user-vendor-name"><?php //echo $_SESSION["cplename"]?></span> 
                         </a>
                             <div class=" dashboard-dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="couple-dashboard-overview.php">Dashboard</a>
-                                <a class="dropdown-item" href="couple-dashboard-mywishlist.php">My Wishlist </a>
+                                <!-- <a class="dropdown-item" href="couple-dashboard-mywishlist.php">My Wishlist </a> -->
                                 <a class="dropdown-item" href="couple-dashboard-todolist.php">To Do List</a>
                                 <!--<a class="dropdown-item" href="couple-dashboard-budget.php">Budget</a>-->
                                 <a class="dropdown-item" href="couple-dashboard-guest-manager.php">Guestlist </a>
