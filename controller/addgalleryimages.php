@@ -14,10 +14,10 @@ if(isset($_POST["submit"])) {
     //if($check !== false) {
         include "../connection/DB.php";
 		
-		mysqli_query($connection, "INSERT INTO galleryImages(magno, regdate, imagepath, delflag) VALUES('".$title1."','".$veregdate."','".$target_file."','0')");
+		mysqli_query($connection, "INSERT INTO galleryimages(magno, regdate, imagepath, delflag) VALUES('".$title1."','".$veregdate."','".$target_file."','0')");
 		echo "<script>
 		alert('Image added to Gallery Successfuly');
-		window.location.href='real-wedding-list.php.php';
+		window.location.href='../vendor-dashboard-add-images.php';
 		</script>";  
 }
 ?>

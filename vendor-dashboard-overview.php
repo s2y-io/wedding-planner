@@ -140,7 +140,7 @@ session_start();
                 <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="card card-summary">
-                        <img src="./images/about-img-2.jpg" alt="">
+                        <img src="./images/wedding-planning-services.jpeg" alt="">
                         </div>
                     </div>
                 </div>
