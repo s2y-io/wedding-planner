@@ -226,7 +226,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-12">
                     <div class="">
                         <div class="well-box-dark">
-                            <form action="controller/makerequest.php?id=<?php $id?>" method="post">
+                            <form action="controller/makerequest.php?id=<?php echo $_GET['id'];?>" method="post">
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                         <h3 class="mb30">Request Quote</h3>
