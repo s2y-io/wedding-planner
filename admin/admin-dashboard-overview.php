@@ -94,6 +94,13 @@ session_start();
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="card card-summary">
+                        <img src="../images/admin-dashboard-background2.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
