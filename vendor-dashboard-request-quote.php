@@ -127,7 +127,7 @@ session_start();
                                 <?php
                                         include "admin/connection/DB.php";
 
-                                        $resultsetGetList = mysqli_query($connection, "SELECT * FROM makereq WHERE del_flag='0'");
+                                        $resultsetGetList = mysqli_query($connection, "SELECT * FROM makereq WHERE del_flag='0' AND venid='".$_SESSION["vendorID"]."'");
                                         while ($row = mysqli_fetch_row($resultsetGetList)) {
                                     ?>
                                     <tr>

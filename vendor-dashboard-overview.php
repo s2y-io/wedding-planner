@@ -124,7 +124,7 @@ session_start();
                                 <div class="float-left">
                                 <?php
                                 include "connection/DB.php";
-                                $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idnewlisting) FROM newlisting WHERE venid='".$_SESSION["vendorID"]."' AND delflag='0'");
+                                $resultsetGetlist = mysqli_query($connection, "SELECT COUNT(idmakereq) FROM makereq WHERE venid='".$_SESSION["vendorID"]."' AND del_flag='0'");
                                 while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     ?>
                                     <div class="summary-count"><?php echo $row[0] ?></div>
@@ -138,7 +138,7 @@ session_start();
                             <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                    <!-- <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
                         <div class="card card-summary">
                             <div class="card-body">
                                 <div class="float-left">
@@ -150,7 +150,7 @@ session_start();
                             </div>
                             <div class="card-footer text-center"><a href="#">View All</a></div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
