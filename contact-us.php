@@ -48,7 +48,7 @@
     </div>
     <!--/.header-top -->
     <!-- header -->
-    <?php include '../silverstar/headermenu.php';?>
+    <?php include 'headermenu.php';?>
     <!-- /.header -->
     <div class="page-header">
         <!-- page-header -->

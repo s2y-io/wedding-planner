@@ -100,7 +100,7 @@ session_start();
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <form action="../silverstar/controller/newlistupload.php" method="post" enctype="multipart/form-data">
+                        <form action="controller/newlistupload.php" method="post" enctype="multipart/form-data">
                             <!-- Form Name -->
                             <div class="venue-form-info">
                                 <div class="row">
