@@ -241,7 +241,7 @@
                         <h3 class="widget-title">
                             Contact Address
                         </h3>
-                        <p>Ja-ela, Colombo,
+                        <p>Kottawa, Colombo,
                             <br> Sri Lanka</p>
                         <p class="mb0 text-default">+9477 850 8066</p>
                         <p class="mb0 text-default">silverstar@silverstar.com</p>
