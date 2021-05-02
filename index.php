@@ -502,7 +502,7 @@ while ($row = mysqli_fetch_row($resultsetGetlist)) {
                             List you Business
                         </h3>
                         <p>Are you vendor ? List your venue and service get more from listing business.</p>
-                        <a href="vendor-form.html" class="btn btn-default">List your Business</a>
+                        <a href="vendor-form.php" class="btn btn-default">List your Business</a>
                     </div>
                 </div>
                 <!-- /.footer-widget -->
