@@ -131,7 +131,7 @@ session_start();
                                     <?php }?>
 
                             </div>
-                              <div class="summary-icon"><i class="icon-004-chat"></i></div>
+                              <div class="summary-icon"><i class="icon-051-balloons"></i></div>
                             </div>
                             <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
                         </div>
@@ -151,7 +151,7 @@ session_start();
                                     <?php }?>
 
                             </div>
-                              <div class="summary-icon"><i class="icon-004-chat"></i></div>
+                              <div class="summary-icon"><i class="icon-051-bell"></i></div>
                             </div>
                             <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
                         </div>
@@ -171,7 +171,7 @@ session_start();
                                     <?php }?>
 
                             </div>
-                              <div class="summary-icon"><i class="icon-004-chat"></i></div>
+                              <div class="summary-icon"><i class="icon-051-cheers"></i></div>
                             </div>
                             <!-- <div class="card-footer text-center"><a href="#">View All</a></div> -->
                         </div>
