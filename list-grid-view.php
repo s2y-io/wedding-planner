@@ -47,7 +47,7 @@
     </div>
     <!--/.header-top -->
      <!-- header -->
-    <?php include '../silverstar/headermenu.php';
+    <?php include 'headermenu.php';
     ?>
      <!-- header -->
     <!-- page header -->
@@ -113,7 +113,7 @@
                             <select class="wide">
                                 <option value="Ahmedabad" data-display="Vendor Category">Vendor Category</option>
                             <?php
-                                        include "../silverstar/connection/DB.php";
+                                        include "connection/DB.php";
                                         $resultsetGetCatlist = mysqli_query($connection, "SELECT * FROM vendorcat WHERE delflag='0'");
                                         while ($row = mysqli_fetch_row($resultsetGetCatlist)) {
                                     ?>
@@ -214,7 +214,7 @@
                         
                 <div class="row">
                      <?php
-                                        include "../silverstar/connection/DB.php";
+                                        include "connection/DB.php";
                                         $resultsetGetlist = mysqli_query($connection, "SELECT * FROM newlisting WHERE approveflag='1' AND delflag='0'");
                                         while ($row = mysqli_fetch_row($resultsetGetlist)) {
                                     ?>
