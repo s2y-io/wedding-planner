@@ -118,7 +118,7 @@ session_start();
                                     
                                 <?php
                                         include "connection/DB.php";
-                                        $resultsetGetacceptlist = mysqli_query($connection, "SELECT COUNT(idnewguest) FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' AND delflag='0' AND declinedflag='1'");
+                                        $resultsetGetacceptlist = mysqli_query($connection, "SELECT COUNT(idnewguest) FROM newguest WHERE cuplid='".$_SESSION["coupleID"]."' AND delflag='0' AND inviteflag='1'");
                                         while ($row = mysqli_fetch_row($resultsetGetacceptlist)) {
                                     ?>
                                      <span class="ml5"><?php echo "$row[0]"?> Invited</span></p><?php }?>
