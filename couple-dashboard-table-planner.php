@@ -71,7 +71,7 @@ session_start();
                                             <option value="0" data-display="Select Guest">Select Guest</option>
                                              <?php
                                                     include "connection/DB.php";
-                                                    $resultsetGetProvince = mysqli_query($connection, "SELECT * FROM newguest WHERE declinedflag='0'");
+                                                    $resultsetGetProvince = mysqli_query($connection, "SELECT * FROM newguest WHERE declinedflag='0' AND cuplid='".$_SESSION["coupleID"]."'");
                                                     while ($row = mysqli_fetch_row($resultsetGetProvince)) {
                                                         
                                                   
